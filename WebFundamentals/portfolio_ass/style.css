@@ -1,0 +1,97 @@
+/* */
+
+*{
+	padding:0;
+	margin:0;
+}
+
+body{
+
+}
+
+a{
+	text-decoration: underline black;
+}
+
+p{
+	font-size: 10pt;
+}
+
+h2{
+	color: white;
+}
+
+h3{
+	color: white;
+}
+
+/* Background: purple radial gradient*/
+.background{
+ 	width: 850px;
+ 	height: 850px;
+ 	background: radial-gradient(#6f5964, #48353d);
+}
+
+/* */
+.header{
+ 	height: 50px;
+ 	width: 970px;
+ 	background-color: #f5f5f5;
+	
+}
+
+.profilePicture{
+	margin: 20px;
+	width: 35%;
+	border: 5px solid grey;
+	display:inline-block;
+}
+
+.aboutHeader{
+	background: radial-gradient(#878593, #878593);
+	height: 30px;
+	width: 375px;	
+}
+
+.aboutBox{
+	background: linear-gradient(#fefefe,#dacbd9);
+	height: 200px;
+	width: 375px;
+	display:inline-block;
+	vertical-align: top;
+	margin-top: 20px;	
+}
+
+.boxHeader{
+	background: radial-gradient(#878593, #878593);
+	height: 30px;
+	width: 215px;
+}
+
+.fancyBoxes{
+	background: linear-gradient(#fefefe,#dacbd9);
+	height: 500px;
+	width: 215px;
+	display:inline-block;
+	vertical-align: top;
+	margin: 15px;
+	
+}
+
+.boxImages{
+	width: 100%;
+}
+
+.socialIcons{
+	width: 2%;
+}
+.techIcons{
+	width: 20%;
+}
+
+.footer{
+ 	height: 50px;
+ 	width: 970px;
+ 	background-color: #f5f5f5;
+}
+
