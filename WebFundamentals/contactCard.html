@@ -1,0 +1,83 @@
+<html>
+   <head>
+       <title>Contact Card</title>
+       <link rel="stylesheet" type="text/css" href="contactCard.css">
+       <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
+       <script type="text/javascript">
+          function random_color()
+          {
+             var rgb = ['a','b','c','d','e','f','0','1','2','3','4','5','6','7','8','9'];
+             color = '#'  //this is what we'll return!
+             for(var i = 0; i < 6; i++) 
+             {
+                x = Math.floor((Math.random()*16))
+                color += rgb[x]; 
+             }
+             return color;
+          }
+
+          function on_form_submit()
+          {
+              $('#form1').submit(function(){
+                  return false;
+                  // do stuff (card stuff)
+              });
+          }
+
+          $(document).ready(function(){
+             $('#large_box').click(function(){
+                alert('you clicked the big box!');  
+         //comment this out when you have figured out what event.stopPropagation is used for
+             })
+             $('.side_box').click(function(event){
+                event.stopPropagation();
+             })
+             $('.middle_box').click(function(event){
+                event.stopPropagation();
+             })
+          });
+      </script>
+   </head>
+   <body>
+      <div id='left-data-entry' style="display:none">
+          <div class='names'>
+
+          </div>
+          <div class='description'>
+              <form> </form>
+
+          </div>
+          <div class='functionality'>
+              <button> Add User </button>
+          </div>
+      </div>
+
+      <div id="alt-left-data-entry">
+          <form id="form1">
+              <div>
+                  <label for="first_name"> First name: </label>
+                  <input type="text" id="first_name" name="first_name">
+              </div>
+              <div>
+                  <label for="last_name"> Last name: </label>
+                  <input type="text" id="last_name" name="last_name">
+              </div>
+              <div>
+                  <label for="desc">Description:</label>
+                  <textarea id="dec" name="description">Enter description</textarea>
+              </div>
+          </form>
+          <div class="button">
+              <button type="submit"> Add User </button>
+          </div>
+      </div>
+
+      <div id='right-data-display'>
+          <div class='contact-card' >
+
+          </div>
+      </div>
+
+
+   </body>
+</html>

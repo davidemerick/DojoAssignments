@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery Functions</title>
+		<link rel="stylesheet" type="text/css" href="jQueryFunctions.css">
+		<script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js'> </script>
+		
+		<script type="text/javascript">
+		$(document).ready(function(){
+			$('#add-class-button').click(function(){
+				//alert("You have clicked a button!");
+				$('.add-class').addClass("red");
+			})
+			$('#slide-toggle-button').click(function(){
+				$(".slide-toggle").slideToggle("slow", function(){
+				
+				});
+			})
+			$('#append-me-button').click(function(){
+				$(".append-me").append("<p> New paragraph added, yo. </p>");
+			})
+			$("#hide-me-button").click(function(){
+				$(".show-me-hide-me").hide();
+			})
+			$("#show-me-button").click(function(){
+				$(".show-me-hide-me").show();
+			})		
+			$("#fade-in-button").click(function(){
+				$(".fade-in-fade-out").fadeIn();
+			})
+			$("#fade-out-button").click(function(){
+				$(".fade-in-fade-out").fadeOut();
+			})	
+			$("#before-button").click(function(){
+				$(".before-and-after").before('<img src="./sb_before.jpg">');
+			})	
+			$("#after-button").click(function(){
+				$(".before-and-after").after();
+			})	
+		//	$('p').css('background-color', 'red');
+		});
+		</script>
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+
+		});
+		</script>
+
+	</head>
+	<body>
+		<header>
+			<div>
+			</div>
+		</header>
+		<div class="the-all-wrapper">
+			<div class="main">
+
+				<div class="add-class">
+					<button type="button" id="add-class-button"> Click me! </button>
+					Text may change. Who knows how!
+				</div>
+
+				<div class="slide-toggle">
+					<button type="button" id="slide-toggle-button"> Click me to slide toggle. </button>
+					Now you see me!
+				</div>
+
+				<div class="append-me">
+					<button type="button" id="append-me-button"> Click me to append. </button>
+					<p> Stuff will be added to me </p>
+				</div>
+
+				<div class="show-me-hide-me">
+					
+						<p> Watch me disappear! </p>
+				</div>
+
+				<div class="show-me-hide-me-buttons">
+					<button type="button" id="show-me-button">
+						Click me to show! </button>
+					<button type="button" id="hide-me-button">
+						Click me to hide. </button>
+				</div>
+
+				<div class="fade-in-fade-out">
+					Faded.
+				</div>
+
+				<div class="fade-in-fade-out-buttons">
+					<button type="button" id="fade-in-button">
+						Click me to fade in! </button>
+					<button type="button" id="fade-out-button">
+						Click me to fade out. </button>
+				</div>
+
+				<div class="before-and-after">
+					<button type="button" id="before-button">
+						Click me to do stuff before! </button>
+					<button type="button" id="after-button">
+						Click me to do stuff after. </button>
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+
+</html>

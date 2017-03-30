@@ -1,0 +1,19 @@
+.the-all-wrapper{
+    background: #00592D;
+    width: 100%;
+    height: 1080px;
+}
+.main{
+    background: lightcyan;
+    width: 100%;
+    height: 720px;
+}
+
+img{
+    width: 120px;
+    
+}
+
+.container{
+    width: 30%;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dojo Arena</title>
+		<link rel="stylesheet" type="text/css" href="dojoArena.css">
+		
+        <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js'> </script>
+		
+		<script type="text/javascript">
+		$(document).ready(function(){
+
+            // button is working 
+            $('#beach').click(function(){
+                 //alert("test");
+                $('#test').css("background-image", "url(./images/beach.jpg)"
+                );
+                $("h2").html("Select Players");
+                $("button").hide();
+                $("#testHide0").show();
+                $("#testHide1").show();
+            });
+
+            $('#planet').click(function(){
+                 //alert("test");
+                $('#test').css("background-image", "url(./images/earth.jpg)"
+                );
+                $("h2").html("Select Players");
+                $("button").hide();
+                $("#testHide0").show();
+                $("#testHide1").show();
+            });  
+            $('#dojo').click(function(){
+                 //alert("test");
+                $('#test').css("background-image", "url(./images/dojo.jpg)"
+                );
+                $("h2").html("Select Players");
+                $("button").hide();
+                $("#testHide0").show();
+                $("#testHide1").show();
+            }); 
+            $('#forest').click(function(){
+                 //alert("test");
+                $('#test').css("background-image", "url(./images/forest.jpg)"
+                );
+                $("h2").html("Select Players");
+                $("button").hide();
+                $("#testHide0").show();
+                $("#testHide1").show();
+            });   
+            $('#matrix').click(function(){
+                 //alert("test");
+                $('#test').css("background-image", "url(./images/matrix.jpg)"
+                );
+                $("h2").html("Select Players");
+                $("button").hide();
+                $("#testHide0").show();
+                $("#testHide1").show();
+            });   
+            $('#snow').click(function(){
+                 //alert("test");
+                $('#test').css("background-image", "url(./images/snow.jpg)"
+                );
+                $("h2").html("Select Players");
+                $("button").hide();
+                $("#testHide0").show();
+                $("#testHide1").show();
+            });           
+        })   
+		</script>
+	</head>
+
+	<body>
+		<div class="the-all-wrapper">
+            
+			<div class="main" id="test">
+                <div class="menu-box">
+                    <h2> Select Arena </h2>
+                    <button type="button" id="beach"> beach</button>
+                    <button type="button" id="planet"> planet</button>
+                    <button type="button" id="dojo"> dojo</button>
+                    <button type="button" id="forest"> forest</button>
+                    <button type="button" id="matrix"> matrix</button>
+                    <button type="button" id="snow"> snow</button>
+                    <div id="testHide0" style="display:none">
+                        <form action="/action_page.php">
+                            <select name="Select Ninja">
+                            <option value="selectNinja">Select Ninja</option>
+                            <option value="donny">Donny</option>
+                            <option value="leo">Leo</option>
+                            <option value="mikey">Mikey</option>
+                            <option value="raphael">Raphael</option>
+                            </select>
+                        </form>
+                    </div>
+        
+                    <div id="testHide1" style="display:none">
+                        <form action="/action_page.php">
+                            <select name="Select Ninja">
+                            <option value="selectNinja">Select Ninja</option>
+                            <option value="donny">Donny</option>
+                            <option value="leo">Leo</option>
+                            <option value="mikey">Mikey</option>
+                            <option value="raphael">Raphael</option>
+                            </select>
+                        </form>
+                    </div>                    
+
+                </div>
+
+			</div>
+
+		</div>
+	</body>
+
+</html>

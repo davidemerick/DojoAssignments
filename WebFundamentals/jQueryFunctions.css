@@ -1,0 +1,80 @@
+.the-all-wrapper{
+    background: orange;
+    width: 100%;
+    height: 1080px;
+}
+.main{
+    background: lightcyan;
+    width: 100%;
+    height: 720px;
+}
+
+
+
+.add-class{
+    width: 100%;
+    background: green;
+    height: 90px;
+}
+
+#add-class-button{
+    color: purple;
+}
+
+.red{
+    background: red;
+    color: red;
+}
+
+.slide-toggle{
+    background: purple;
+    width: 100%;
+    height: 90px;
+}
+
+#slide-toggle-button{
+    color: darkblue;
+}
+
+.append-me{
+    background:red;
+    width: 100%;
+    height: 90px;
+}
+
+#append-me-button{
+    color: palevioletred;
+}
+
+.show-me-hide-me{
+    background: gray;
+    width: 100%;
+    height: 90px;
+}
+
+#hide-me-button{
+    color: teal;
+}
+
+#show-me-button{
+    color: violet;
+}
+
+.show-me-hide-me-buttons{
+    background: blue;
+}
+
+.fade-in-fade-out{
+    background: lightblue;
+}
+
+
+.fade-in-fade-out-buttons{
+    color: orange;
+}
+
+.before-and-after{
+    background: orange;
+    width: 100%;
+    height: 90px;
+}
