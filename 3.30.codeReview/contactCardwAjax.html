@@ -38,17 +38,19 @@
              //listen for click of #adduser, submit #the-form
              $('#the-form').submit(function(){
                  alert("ajax submit about to start");
+                 // try ajax
                 $.ajax(
-                    { // create an AJAX call...
-                        data: $(this).serialize(), // get the form data
-                        type: $(this).attr('method'), // GET or POST
+                    { 
+                        data: $(this).serialize(), // serialize data
+                        type: $(this).attr('method'), // method
                         url: $(this).attr('action'), // the file to call
                         success: function(response) 
                             { // on success..
                                 $('#contact-card').html(response); // update the DIV with serialized form data
                             }   
                     });
-                    return false; // cancel original event to prevent form submitting
+                    // no refresh
+                    return false; 
             });
           });
       </script>
