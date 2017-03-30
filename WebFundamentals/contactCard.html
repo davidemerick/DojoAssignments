@@ -4,56 +4,61 @@
        <link rel="stylesheet" type="text/css" href="contactCard.css">
        <script type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.min.js'></script> 
        <script type="text/javascript">
-          function random_color()
-          {
-             var rgb = ['a','b','c','d','e','f','0','1','2','3','4','5','6','7','8','9'];
-             color = '#'  //this is what we'll return!
-             for(var i = 0; i < 6; i++) 
-             {
-                x = Math.floor((Math.random()*16))
-                color += rgb[x]; 
-             }
-             return color;
-          }
-
-          function on_form_submit()
-          {
-              $('#form1').submit(function(){
-                  return false;
-                  // do stuff (card stuff)
-              });
-          }
 
           $(document).ready(function(){
-             $('#large_box').click(function(){
-                alert('you clicked the big box!');  
-         //comment this out when you have figured out what event.stopPropagation is used for
+            // on click of target 'button' in document execute function
+             alert("ready");
+             //$(document).on('click', 'button',function(){
+
+             //})
+
+             // on click of target ID '#adduser', 
+             //$(document).on('click', '#adduser', function(){
+
+             //})
+
+             // on click of target ID '#contact-card'
+             //$(document).on('click', '#contact-card', function(){
+
+             //})
+
+             // listener of form submit to cancel page change/reload
+             $('form').submit(function(){
+                 alert("form was submitted")
+                 return false;
+             });
+
+             // submit id#the-form when id#addUser is clicked
+             $('#addUser').click(function(){
+                 $('#the-form').submit();
+                 alert("#adduser was clicked, #the-form submit attempted")
+                 return false;
              })
-             $('.side_box').click(function(event){
-                event.stopPropagation();
-             })
-             $('.middle_box').click(function(event){
-                event.stopPropagation();
-             })
+
+             //listen for click of #adduser, submit #the-form
+             $('#the-form').submit(function(){
+                 alert("ajax submit about to start");
+                $.ajax(
+                    { // create an AJAX call...
+                        data: $(this).serialize(), // get the form data
+                        type: $(this).attr('method'), // GET or POST
+                        url: $(this).attr('action'), // the file to call
+                        success: function(response) 
+                            { // on success..
+                                $('#contact-card').html(response); // update the DIV with serialized form data
+                            }   
+                    });
+                    return false; // cancel original event to prevent form submitting
+            });
           });
       </script>
    </head>
    <body>
-      <div id='left-data-entry' style="display:none">
-          <div class='names'>
 
-          </div>
-          <div class='description'>
-              <form> </form>
-
-          </div>
-          <div class='functionality'>
-              <button> Add User </button>
-          </div>
-      </div>
 
       <div id="alt-left-data-entry">
-          <form id="form1">
+         
+          <form id="the-form" method="POST" action="test1.html">
               <div>
                   <label for="first_name"> First name: </label>
                   <input type="text" id="first_name" name="first_name">
@@ -66,18 +71,34 @@
                   <label for="desc">Description:</label>
                   <textarea id="dec" name="description">Enter description</textarea>
               </div>
+              <input type="submit" value="Add User">
           </form>
+
           <div class="button">
-              <button type="submit"> Add User </button>
+              <button type="submit" id="addUser"> Add User </button>
           </div>
+
       </div>
 
       <div id='right-data-display'>
-          <div class='contact-card' >
-
+          <div id='contact-card'>
+              <h2></h2>
+              <p></p>
           </div>
       </div>
 
+      <div id='left-data-entry' style="display:none">
+          <div class='names'>
+
+          </div>
+          <div class='description'>
+              <form> </form>
+
+          </div>
+          <div class='functionality'>
+              <button> Add User </button>
+          </div>
+      </div>      
 
    </body>
 </html>
