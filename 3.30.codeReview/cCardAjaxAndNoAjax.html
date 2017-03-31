@@ -15,15 +15,12 @@
                  $("#right-data-display").append("<div id='contact-card'><p>"+firstname+" "+lastname+"</p><p id='descr'>" +description+"</p></div>");
 
                  return false;
+
                 });
                 
                  $(document).on('click', '#contact-card', function(){
                      $(this).children().toggle();
                  });
-
-            
-
-             // submit id#the-form when id#addUser is clicked
 
              //listen for click of #adduser, submit #the-form
              $('#addUser').click(function(){
@@ -46,10 +43,7 @@
       </script>
    </head>
    <body>
-
-
       <div id="alt-left-data-entry">
-         
           <form id="the-form" action="">
               <div>
                   <label for="first_name"> First name: </label>
@@ -62,20 +56,14 @@
               <div>
                   <label for="desc">Description:</label>
                   <textarea id="desc" name="desc">Enter description</textarea>
-
               </div>
               <input type="submit" value="Add User">
           </form>
-
           <div class="button">
               <button type="submit" id="addUser"> Add User </button>
           </div>
-
       </div>
-
       <div id='right-data-display'>
       </div>
-    
-
    </body>
 </html>
