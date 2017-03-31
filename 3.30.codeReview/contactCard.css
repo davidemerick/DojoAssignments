@@ -56,8 +56,6 @@ button {
   margin-left: .5em;
 }
 
-#contact-card {
-    width: 50%;
-    height: 480px;
-    background: gray;
+#descr {
+    display: none;
 }
